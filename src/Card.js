@@ -2,6 +2,11 @@ import React from 'react';
 
 export default function Card (props) {
     return (
-       <h1>Merry Christmas {props.receiver}! - From {props.sender}</h1>
+      <div className="card-container">
+        <div className="card">
+          <div>Merry Christmas {props.receiver}!</div>
+          <small>- From {props.sender}</small>
+        </div>
+      </div>
   );
 }
