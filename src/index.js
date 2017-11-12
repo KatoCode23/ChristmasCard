@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './Card';
+import Message from './Message';
 
 
 class Greeting extends React.Component {
@@ -34,8 +35,10 @@ class Greeting extends React.Component {
   render() {
 
       let finalResult = null;
+      let personalMessage = null;
       if (this.state.readyToRender) {
         finalResult = <Card sender={this.state.sender} receiver={this.state.receiver} />
+        personalMessage = <Message />
     }
     return (
       <form onSubmit={this.onSubmitForm}>
@@ -47,7 +50,7 @@ class Greeting extends React.Component {
         <input type="submit" />
 
         {finalResult}
-
+        {personalMessage}
       </form>
      );
    }
