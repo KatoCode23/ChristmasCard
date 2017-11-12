@@ -11,11 +11,13 @@ class Greeting extends React.Component {
     this.state = {
       sender: '',
       receiver: '',
+      message: '',
       readyToRender: false
     };
 
     this.onChangeSender = this.onChangeSender.bind(this);
     this.onChangeReceiver = this.onChangeReceiver.bind(this);
+    this.onChangeMessage = this.onChangeMessage.bind(this);
     this.onSubmitForm = this.onSubmitForm.bind(this);
   }
   onChangeSender(event) {
@@ -24,9 +26,12 @@ class Greeting extends React.Component {
   onChangeReceiver(event) {
     this.setState({receiver: event.target.value});
   }
+  onChangeMessage(event) {
+    this.setState({message: event.target.value});
+  }
   onSubmitForm(e) {
     e.preventDefault();
-    if(this.state.receiver === '' || this.state.sender === '') {
+    if(this.state.receiver === '' || this.state.sender === '' || this.state.messenger === '') {
        this.setState({ readyToRender: false });
     }else{
       this.setState({ readyToRender: true });
@@ -39,7 +44,7 @@ class Greeting extends React.Component {
       let personalMessage = null;
       if (this.state.readyToRender) {
         finalResult = <Card sender={this.state.sender} receiver={this.state.receiver} />
-        personalMessage = <Message />
+        personalMessage = <Message message={this.state.message} />
     }
     return (
       <form onSubmit={this.onSubmitForm}>
@@ -53,7 +58,10 @@ class Greeting extends React.Component {
           <label>To:</label>
           <input type="text" value={this.state.receiver} onChange={this.onChangeReceiver} />
         </div>
-
+      <div className="form-field">
+        <label>Message:</label>
+        <textarea type="text" value={this.state.message} onChange={this.onChangeMessage} />
+      </div>
         <input type="submit" value="Create Card" />
 
         {finalResult}

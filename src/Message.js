@@ -2,10 +2,12 @@ import React from 'react';
 
 
 
-export default class Message extends React.Component {
-  render() {
+export default function Message (props) {
     return (
-      <textarea>You are whatever message I want you to be</textarea>
+  <div className="card-container">
+    <div className="message">
+      <textarea>{props.message}</textarea>
+    </div>
+  </div>
     );
   }
-}
