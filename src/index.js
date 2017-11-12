@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './Card';
-import './Styles';
+import './styles/main.css';
 
 
 class Greeting extends React.Component {
@@ -40,17 +40,18 @@ class Greeting extends React.Component {
     }
     return (
       <form onSubmit={this.onSubmitForm}>
-        <div>
+        <h1>Christmas Card</h1>
+        <div className="form-field">
           <label>From:</label>
           <input type="text" value={this.state.sender} onChange={this.onChangeSender} />
         </div>
 
-        <div>
+        <div className="form-field">
           <label>To:</label>
           <input type="text" value={this.state.receiver} onChange={this.onChangeReceiver} />
         </div>
 
-        <input type="submit" />
+        <input type="submit" value="Create Card" />
 
         {finalResult}
 
