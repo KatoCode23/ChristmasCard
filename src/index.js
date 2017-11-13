@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './Card';
-import Message from './Message';
 import './styles/main.css';
 
 
@@ -43,8 +42,7 @@ class Greeting extends React.Component {
       let finalResult = null;
       let personalMessage = null;
       if (this.state.readyToRender) {
-        finalResult = <Card sender={this.state.sender} receiver={this.state.receiver} />
-        personalMessage = <Message message={this.state.message} />
+        finalResult = <Card sender={this.state.sender} receiver={this.state.receiver} message={this.state.message} />
     }
     return (
       <form onSubmit={this.onSubmitForm}>
@@ -65,7 +63,6 @@ class Greeting extends React.Component {
         <input type="submit" value="Create Card" />
 
         {finalResult}
-        {personalMessage}
       </form>
      );
    }

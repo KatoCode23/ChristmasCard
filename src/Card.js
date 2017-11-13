@@ -6,6 +6,7 @@ export default function Card (props) {
         <div className="card">
           <div>Merry Christmas {props.receiver}!</div>
           <small>- From {props.sender}</small>
+          <div>{props.message}</div>
         </div>
       </div>
   );
