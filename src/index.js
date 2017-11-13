@@ -40,7 +40,6 @@ class Greeting extends React.Component {
   render() {
 
       let finalResult = null;
-      let personalMessage = null;
       if (this.state.readyToRender) {
         finalResult = <Card sender={this.state.sender} receiver={this.state.receiver} message={this.state.message} />
     }

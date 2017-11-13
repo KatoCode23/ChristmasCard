@@ -53,14 +53,6 @@ label {
     box-shadow: 5px 10px 15px rgba(97, 97, 97, 0.4);
 }
 
-.message {
-    background: green;
-    display: inline-block;
-    padding: 50px;
-    border: 1px solid black;
-    color: white;
-    font-size: 3em;
-    font-weight: 100;
-    border-radius: 20px;
-    box-shadow: 5px 10px 15px rgba(97, 97, 97, 0.4);
+.card p{
+  font-style: italic;
 }
