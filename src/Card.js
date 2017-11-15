@@ -4,9 +4,9 @@ export default function Card (props) {
     return (
       <div className="card-container">
         <div className="card">
-          <div>Merry Christmas {props.receiver}!</div>
-          <small>- From {props.sender}</small>
-          <p>{props.message}</p>
+          <p className="merry-christmas">Merry Christmas {props.receiver}!</p>
+          <p className="message">{props.message}</p>
+          <div className="from"><p>- From {props.sender}</p></div>
         </div>
       </div>
   );

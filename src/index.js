@@ -45,7 +45,7 @@ class Greeting extends React.Component {
     }
     return (
       <form onSubmit={this.onSubmitForm}>
-        <h1>Christmas Card</h1>
+        <h1 className="title">Christmas Card</h1>
         <div className="form-field">
           <label>From:</label>
           <input type="text" value={this.state.sender} onChange={this.onChangeSender} />

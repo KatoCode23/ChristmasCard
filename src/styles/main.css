@@ -9,12 +9,6 @@ body {
         "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-p, h1, h2, h3, ul, li {
-    font-weight: 100;
-    margin: 0 0 10px 0;
-    padding: 0;
-}
-
 input {
     font-size: 20px;
 }
@@ -24,13 +18,13 @@ a {
     text-decoration: none;
 }
 
-small {
-    font-size: .5em;
-}
-
 label {
     display: inline-block;
     width: 100px;
+}
+
+.title{
+  font-weight: 100;
 }
 
 .form-field {
@@ -44,15 +38,27 @@ label {
 .card {
     background: #460404;
     display: inline-block;
-    padding: 50px;
+    padding: 35px;
     border: 1px solid black;
     color: white;
-    font-size: 2em;
-    font-weight: 100;
     border-radius: 20px;
     box-shadow: 5px 10px 15px rgba(97, 97, 97, 0.4);
 }
 
-.card p{
+.merry-christmas{
+  font-size: 2em;
+  color: red;
+  font-weight: 600;
+}
+
+.message{
+  font-weight: 100;
   font-style: italic;
+  font-size: 1.5em;
+}
+
+.from{
+  text-align: right;
+  font-size: 1em;
+  font-weight: 100;
 }
